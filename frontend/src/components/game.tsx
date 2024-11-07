@@ -17,13 +17,12 @@ const anotherScene2 = new AnotherScene();
 // gameObj.scene.add("2thScene", anotherScene1);
 // gameObj.scene.start("2thScene");
 
-console.log(gameObj.scene.getScene("2thScene")); // This should now return the scene instance
+console.log(gameObj.scene.getScene("2thScene")); // shows null
 
-console.log("keys=",Object.keys(gameObj.scene.keys));
 gameObj.events.once("PostBoot", () => {
   gameObj.scene.add("SecondScene", anotherScene2);
   gameObj.scene.start("SecondScene");
-  console.log("2nd sceene:", gameObj.scene.getScene("SecondScene"));
+  console.log("2nd sceene:", gameObj.scene.getScene("SecondScene")); // shows null
   gameObj.events.emit("updateSceneList");
 });
 
