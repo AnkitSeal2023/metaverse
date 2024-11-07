@@ -23,7 +23,7 @@ console.log("keys=",Object.keys(gameObj.scene.keys));
 gameObj.events.once("PostBoot", () => {
   gameObj.scene.add("SecondScene", anotherScene2);
   gameObj.scene.start("SecondScene");
-  console.log("2nd scene:", gameObj.scene.getScene("SecondScene"));
+  console.log("2nd sceene:", gameObj.scene.getScene("SecondScene"));
   gameObj.events.emit("updateSceneList");
 });
 
