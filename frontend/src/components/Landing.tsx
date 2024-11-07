@@ -1,5 +1,5 @@
-import React from "react";
-import { io, Socket } from "socket.io-client";
+// import React from "react";
+import { io } from "socket.io-client";
 var socket = io('http://localhost:3001');
 export default function Land(){
     function joinroom()
@@ -14,7 +14,7 @@ export default function Land(){
     }
     function game()
     {
-        
+        window.location.href = "http://localhost:5173/game.html";
     }
     console.log("initialized socket");
     socket.emit("checkrooms");

@@ -33,10 +33,10 @@ app.use(cors({
 
 io.on("connection", (socket) => {
     console.log("Connected socket");
-    socket.on('left', () => console.log("moved left"));
-    socket.on('right', () => console.log("moved right"));
-    socket.on('up', () => console.log("moved up"));
-    socket.on('down', () => console.log("moved down"));
+    socket.on('left', () => 0);
+    socket.on('right', () => 0);
+    socket.on('up', () => 0);
+    socket.on('down', () => 0);
     socket.on("joinroom",(room)=>socket.join(room));
     console.log("rooms:", socket.rooms);
 });
