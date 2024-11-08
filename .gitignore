@@ -24,4 +24,3 @@ dist-ssr
 *.sw?
 /frontend/node_modules
 /backend/node_modules
-frontend/src/components/test.tsx
